@@ -7,6 +7,8 @@
 //this is a global value
 let hoursOpen = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm']
 
+// Creating Object Literals
+
 //seattleStore object
 let seattleStore = {
 	location: 'Seattle',
@@ -412,4 +414,28 @@ laurel.hairColor = black;
 
 // prototype edits the constructor to apply to all the instances
 Student.prototype.hairColor = 'black';
+*/
+
+/*
+
+let numberArray = [
+	// 0/0 	0/1		0/2
+	[1900, 1920, 1932]
+	// 1/0	1/1		1/2
+	[1884, 1976, 2001]
+	// 2/0	2/1		2/2
+	[1904, 1964, 1988]
+];
+cosole.log(numberArray[2][1]); //1964
+
+// I want to log the numbers
+// outer loop runs through through each array in the numberArray
+for (let i = 0; i < numberArray.length; i++) {
+	// inner loop runs through each number in each array
+	for (let j = 0; j < numberArray.length; j++){
+		// this is logging 1990, 1984, 1904, 1920, 1976...
+		console.log(`numberArray[${j}][${i}])
+	}
+}
+
 */
