@@ -1,0 +1,92 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: coral;
+	width: 100%;
+}
+
+header img {
+		padding: 10px;
+		display: flex;
+		justify-content: flex-start;
+		width: 30%;
+		height: 30%;
+}
+
+main {
+	background-color: darksalmon;
+	width: 100%;
+	margin: 30px auto 30px;
+}
+
+main #family-business {
+	display: flex;
+	justify-content: center;
+}
+
+#family-business {
+	background-color:burlywood;
+	border: 1px solid brown;
+	margin: auto;
+	width: 65%;
+	height: 50%;
+	display: flexbox;
+	justify-content: space-around;
+}
+
+#family-business img {
+	width: 65%;
+	height: 50%;
+	padding: 10px;
+}
+
+#seattle {
+	background-color: burlywood;
+	display:flex
+}
+
+#tokyo {
+	background-color: burlywood;
+	display:flex
+}
+
+#dubai {
+	background-color: burlywood;
+	display: flex;
+}
+
+#paris {
+	background-color: burlywood;
+	display: flex;
+}
+
+#lima {
+	background-color: burlywood;
+	display: flex;
+}
+
+#merch img {
+	height: 250px;
+	width: 225px;
+}
+
+footer {
+	background-color: brown;
+	height: 50px;
+}
+
+/* .container {
+	border:1px solid black;
+	display: flex;
+	align-items: center;
+}
+
+.container div {
+	background-color: lightsteelblue;
+	margin: 5rem;
+	border: 1px solid black;
+} */
