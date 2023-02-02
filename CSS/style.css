@@ -1,0 +1,78 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: coral;
+	width: 100%;
+	border-bottom: 8px groove lightseagreen;
+}
+
+header img {
+		padding: 10px;
+		display: flex;
+		justify-content: flex-start;
+		width: 200px;
+		height: 70px;
+}
+
+main {
+	background-color: darksalmon;
+	width: 100%;
+	margin: auto;
+}
+
+#family-business {
+	background-color:burlywood;
+	border: 1px solid brown;
+	margin: 30px auto auto auto;
+	width: 65%;
+	height: 50%;
+	display: flex;
+	justify-content: space-around;
+}
+
+#family-business img {
+	width: 65%;
+	height: 50%;
+	padding: 10px;
+}
+
+/* I want all my location boxes to be next to each other */
+#other-locations {
+	display: flex;
+	justify-items: flex-start;
+}
+
+#seattle, #tokyo, #dubai, #paris, #lima {
+	background-color: burlywood;
+	display:flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border: 1px solid black;
+	width: 30%;
+}
+
+img {
+	width: 20%;
+}
+
+footer {
+	background-color: brown;
+	width: 100%;
+	height: 50px;
+}
+
+/* .container {
+	border:1px solid black;
+	display: flex;
+	align-items: center;
+}
+
+.container div {
+	background-color: lightsteelblue;
+	margin: 5rem;
+	border: 1px solid black;
+} */
