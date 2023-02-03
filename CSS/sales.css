@@ -1,0 +1,46 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: coral;
+	width: 100%;
+	border-bottom: 8px groove lightseagreen;
+}
+
+header img {
+		padding: 10px;
+		display: flex;
+		justify-content: flex-start;
+		width: 200px;
+		height: 70px;
+}
+
+main {
+	background-color: darksalmon;
+	width: 100%;
+	margin: auto;
+}
+
+table {
+	width: 100%;
+	table-layout: fixed;
+	margin: 2rem;
+	background-color: white;
+}
+
+table, th, td, tr{
+	border: 1px solid black;
+	border-collapse:collapse;
+
+}
+
+table td {
+	border: 1px solid black;
+	padding: .5rem;
+	border-collapse: collapse;
+	font-family: 'Arial';
+
+}
