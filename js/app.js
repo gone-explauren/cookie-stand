@@ -2,6 +2,18 @@
 
 // globals
 let storeHoursArray = ['6 a.m.', '7 a.m.', '8 a.m.', '9 a.m.', '10 a. m.', '11 a. m.', '12 p.m.', '1 p.m.', '2 p.m.', '3 p.m.', '4 p.m.', '5 p.m.', '6 p.m.', '7 p.m.']
+
+let storesTable = document.getElementById('salesTable');
+
+let tHead = document.createElement('thead');
+storesTable.appendChild(tHead);
+
+let tBody = document.createElement('tbody');
+storesTable.appendChild(tBody);
+
+let tFoot = document.createElement('tFoot');
+storesTable.appendChild(tFoot);
+
 // could also be a global
 // let allStoresArray = [];
 // let seattle = new Store('seattle', 23, 65, 6.3);
@@ -38,9 +50,8 @@ function Store(location, min, max, avg) {
 
 	this.renderTable = function () {
 		this.calculateCookiesSoldPerHour();
-		let storesTable = document.getElementById('salesTable');
 		let trRow = document.createElement('tr');
-		storesTable.appendChild(trRow);
+		tBody.appendChild(trRow);
 		let thStore = document.createElement('th')
 		thStore.textContent = this.storeLocation;
 		trRow.appendChild(thStore);
@@ -64,9 +75,6 @@ function Store(location, min, max, avg) {
 };
 
 let renderTableHead = function () {
-	let storesTableHead = document.getElementById('salesTable');
-	let tHead = document.createElement('thead');
-	storesTableHead.appendChild(tHead);
 	let tHeadBlank = document.createElement('th');
 	tHeadBlank.textContent = '';
 	tHead.appendChild(tHeadBlank);
@@ -82,9 +90,8 @@ let renderTableHead = function () {
 };
 
 let renderTableFoot = function () {
-	let storesTableFoot = document.getElementById('salesTable');
-	let tFoot = document.createElement('tFoot');
-	storesTableFoot.appendChild(tFoot);
+	let trFoot = document.createElement('tr');
+	tFoot.appendChild(trFoot);
 
 	// outer loop
 	let sumDailyTotalAllStores = 0;
@@ -95,25 +102,25 @@ let renderTableFoot = function () {
 		if (i === 0) {
 			let tdFootTotal = document.createElement('td');
 			tdFootTotal.textContent = "Totals"
-			tFoot.appendChild(tdFootTotal);
+			trFoot.appendChild(tdFootTotal);
 		}
 
 		//get the hourly totals for all stores
 		for (let j = 0; j < storesArray.length; j++) {
 			//console.log(storesArray[j]);
-			console.log(storesArray[j].totalCookiesPerHour[i]);
+			// console.log(storesArray[j].totalCookiesPerHour[i]);
 			sumHourlyAllStores += storesArray[j].totalCookiesPerHour[i];
 		}
 		let tdFoot = document.createElement('td');
 		tdFoot.textContent = sumHourlyAllStores;
-		tFoot.appendChild(tdFoot);
+		trFoot.appendChild(tdFoot);
 
 		sumDailyTotalAllStores += sumHourlyAllStores;
 		//console.log(sumDailyTotalAllStores);
 	}
 	let tdGrandTotal = document.createElement('td');
 	tdGrandTotal.textContent = sumDailyTotalAllStores;
-	tFoot.appendChild(tdGrandTotal);
+	trFoot.appendChild(tdGrandTotal);
 };
 
 let seattle = new Store(
@@ -157,11 +164,66 @@ for (let i = 0; i < storesArray.length; i++) {
 	//console.log(storesArray[i].totalCookiesPerHour[i]);
 };
 
-// let render = function () {
 renderTableHead();
-// 	renderTable();
 renderTableFoot();
-// };
 
-// storesArray.render();
+// function capitalizationFuntion(str) {
+// 	//capitalizing the first letter of each word of the city submitted in the form
 
+// 	// character at [0] will be made upper case, and the string will be sliced starting at [1] with no end of the slice [example: str.slice(1, 5)]
+// 	let str2 = str.charAt(0).toUpperCase() + str.slice(1);
+// 	console.log(str2);
+
+// 	// // when looking for spaces:
+// 	// // the string below comes back with a space a 0, nothing to capitalize.
+// 	// let strOneWord = ' seattle';
+// 	// console.log(strOneWord.indexOf(' '));
+
+// 	// // if that comes back -1
+// 	let index = str2.indexOf(' ');
+// 	if (index === -1) {
+// 		return str2;
+// 	} else {
+// 		while (index !== -1) {
+// 			let locationCapitalized = str2.charAt(index + 1).toUpperCase() + str2.slice(index + 2);
+// 			console.log(locationCapitalized);
+// 		}
+// 	}
+// 	console.log(locationCapitalized);
+// }
+
+// // don't forget to cantatonize after slicing!
+// // end capitalization
+
+
+// Add a new store using events
+let newStoreForm = document.querySelector("form");
+newStoreForm.addEventListener('submit',
+	function (event) {
+		event.preventDefault();
+		let location = event.target.location.value;
+		// location = capitalizationFuntion(location);
+
+		const min = event.target.min.value;
+		const max = event.target.max.value;
+		const avg = event.target.avg.value;
+
+		// new store is now a part of the Store constructor
+		const newStore = new Store(location, min, max, avg);
+		//console.log(newStore.storeLocation);
+
+		// push new store to storesArray
+		storesArray.push(newStore);
+
+		// new store has access to the functions inside the constructor, but they still need to be called
+		newStore.calculateCookiesSoldPerHour();
+		newStore.renderTable();
+
+		// the table foot previously rendered without the new store, so I must remove the old foot and build a new one.
+		tFoot.lastChild.remove();
+		// the info from the new store is passed through the renderTableFoot function, going through all the calculations therein, and a new, updated table foot is generated
+		renderTableFoot();
+
+		newStoreForm.reset();
+	}
+);
