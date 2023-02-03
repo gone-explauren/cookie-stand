@@ -6,15 +6,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Index</title>
-	<link rel="stylesheet" href="CSS/reset.css">
-	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 
 <body>
 	<header>
 		<nav>
-			<img src="IMG/salmon.png">
+			<img src="img/salmon.png">
 			<a href="sales.html">Sales</a>
 		</nav>
 		<section>
@@ -23,11 +23,11 @@
 	</header>
 	<main>
 		<article class id="family-business">
-			<img src="IMG/family.jpg">
+			<img src="img/family.jpg">
 		</article>
 		<section id="other-locations">
 			<article class id="seattle">
-				<img src="IMG/fish.jpg">
+				<img src="img/fish.jpg">
 				<h1>Seattle</h1>
 				<ul>
 					<li>Open everyday from 6 a.m. to 8 p.m.</li>
@@ -36,7 +36,7 @@
 				</ul>
 			</article>
 			<article class id="tokyo">
-				<img src="IMG/cutter.jpeg">
+				<img src="img/cutter.jpeg">
 				<h2>Tokyo</h2>
 				<ul>
 					<li>Open everyday from 6 a.m. to 8 p.m.</li>
@@ -45,7 +45,7 @@
 				</ul>
 			</article>
 			<article class id="dubai">
-				<img src="IMG/chinook.jpg">
+				<img src="img/chinook.jpg">
 				<h3>Dubai</h3>
 				<ul>
 					<li>Open everyday from 6 a.m. to 8 p.m.</li>
@@ -54,7 +54,7 @@
 				</ul>
 			</article>
 			<article class id="paris">
-				<img src="IMG/frosted-cookie.jpg">
+				<img src="img/frosted-cookie.jpg">
 				<h4>Paris</h4>
 				<ul>
 					<li>Open everyday from 6 a.m. to 8 p.m.</li>
@@ -63,7 +63,7 @@
 				</ul>
 			</article>
 			<article class id="lima">
-				<img src="IMG/shirt.jpg">
+				<img src="img/shirt.jpg">
 				<h5>Lima</h5>
 				<ul>
 					<li>Open everyday from 6 a.m. to 8 p.m.</li>
@@ -77,50 +77,49 @@
 
 	</footer>
 
-	<script src="JS/app.js"></script>
+	<script src="js/app.js"></script>
 
 </body>
 
 </html>
 
-<!--
+<!-- 
+	
+Chat Events:
 
-//present data in rows and columns (tabular) by using a table in html
-Creating a Table:
+<!DOCTYPE html>
+<html lang="en">
 
-//refer to CSS default able layout code
-<table>
-		<thead>
-			<tr>
-				<th>Head</th>
-				<th>Head</th>
-				<th>Head</th>
-			</tr>
-		<thead>
-		<tbody>
-			<tr>
-				<td>Data<td>
-				<td>Data<td>
-				<td>Data<td>
-			</tr>
-			<tr>
-				<td>Data<td>
-				<td>Data<td>
-				<td>Data<td>
-			</tr>
-			<tr>
-				<td>Data<td>
-				<td>Data<td>
-				<td>Data<td>
-			<tr>
-		</tbody>
-		<tfoot>
-			<tr>
-				<td>Data<td>
-				<td>Data<td>
-				<td>Data<td>
-			<tr>
-		<tfoot>
-	</table>
+ <head>
+  <meta charset="UTF-8">
+  <title>Homegrown Slack</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+ </head>
+
+ <body>
+
+  <h1>Note: Your possible users are Benton, Dan, Jonny, Katie, Sam, Nick, and Otis.</h1>
+
+  <form id="chat-form">
+    <fieldset>
+      <legend>Chat submission form</legend>
+
+      <label for="who">Who: </label>
+      <input name="who" type="text" />
+
+      <label for="says">Comment: </label>
+      <input name="says" type="text" size="50" />
+
+      <button id="comment-button" type="submit">Create new comment!</button>
+    </fieldset>
+  </form>
+
+  <button id="clear-chat-list">Clear all comments!</button>
+
+  <ul id="chat-list"></ul>
+
+  <script src="chat.js"></script>
+ </body>
+</html> 
 
 -->

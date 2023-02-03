@@ -7,19 +7,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sales</title>
 	<a href="sales.html"></a>
-	<link rel="stylesheet" href="CSS/sales.css">
-	<link rel="stylesheet" href="CSS/reset.css">
+	<link rel="stylesheet" href="css/sales.css">
+	<link rel="stylesheet" href="css/reset.css">
 </head>
 
 <body>
 <header>
 	<nav>
-		<img src="IMG/salmon.png">
+		<img src="img/salmon.png">
 		<a href="index.html">Home</a>
 	</nav>
 </header>
 
 <main>
+
 	<!-- <h1>Cookie Sales</h1>
 	<div id="seattle"><h2>Seattle</h2></div>
 	<div id="tokyo"><h3>Tokyo</h3></div>
@@ -27,15 +28,181 @@
 	<div id="paris"><h5>Paris</h5></div>
 	<div id="lima"><h6>Lima</h6></div> -->
 
-	<table id="salesTable">
-		
-	</table>
-</main>
+	<h1>Add a New Store</h1>
 
+	<!--
+		Information needed:
+		- Location
+		- Min customers
+		- Max customers
+		- Avg customers
+	-->
+	<form id="addStoreForm">
+		<fieldset>
+			<legend>Basic Information</legend>
+			<label>Store Location</label>
+			<input name="location" required type="text"/>
+		</fieldset>
+		<fieldset>
+			<legend>Sales Information</legend>
+			<label>Minimum Hourly Customers</label>
+			<input name="min" required type="number"/>
+			<label>Maximum Hourly Customers</label>
+			<input name="max" required type="number"/>
+			<label>Average Cookie Sales per Customer</label>
+			<input name="avg" required type="number">
+		</fieldset>
+		<button type="submit">Submit</button>
+	</form>
+
+	<table id="salesTable">
+	</table>
+
+</main>
 <footer>
 
 </footer>
-<script src="JS/app.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>
+
+<!-- 
+	
+	Forms:
+
+	<body>
+    <header>
+      <h1>Adopt a Kitten</h1>
+    </header>
+    <main>
+      <h2>Add a Kitten</h2> 
+        //Form Data Needed:
+        //name
+        //interests
+        //isGoodWithKids
+        //isGoodWithDogs
+        //isGoodWithOtherCats 
+      <form id="addKittenForm">
+        <fieldset>
+          <legend>Basic Information</legend>
+          <label>Name</label>
+          <input name="name" type="text"/>
+          <label>Interests</label>
+          <input name="interests" type="text" />
+          <span>List interests, separated by commas</span>
+        </fieldset>
+        <fieldset>
+          <legend>Placement Information</legend>
+          <p>Can be placed with...</p>
+          <label>
+            <input name="isGoodWithKids" type="checkbox" />
+            Kids
+          </label>
+          <label>
+            <input name="isGoodWithDogs" type="checkbox" />
+            Dogs
+          </label>
+          <label>
+            <input name="isGoodWithOtherCats" type="checkbox" />
+            Other Cats
+          </label>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+      <h2>Kittens Available for Adoption:</h2>
+      <div id="kittenProfiles">
+      </div>
+    </main>
+
+		// ***
+
+	<aside>
+	<form id="form">
+		// Kitten(name, arrayOfLikes, about, photoURL, photoAlt)
+		<fieldset>
+			<legend>Kitten Info</legend>
+			// the "for" on the label has to match the "id" of the input
+		in order for screenreaders to acces the information
+			<label for="nameOfKitten">Kitten's Name:</label>
+			<input type="text" placeholder="ex. Socks" id="nameOfKitten" name="kittenName" required>
+
+			// this wokrs with screenreaders by wrapping the lable around the input. We don't need the for or id here
+			<label>Number of Months Old:
+				<input type="number" name="ageInMonths">
+			</label>
+
+			<label>About Kitten:
+				<textarea name="aboutKitten"></textarea>
+			</label>
+
+			<label>Photo URL:
+				<input type="url" name="imageURL">
+			</label>
+
+			<label>About Photo:
+				<input type="text" name="imageAlt">
+			</label>
+		</fieldset>
+
+		<fieldset>
+			<legend>Kitten's Favorite Things</legend>
+			<label>1st Favorite:
+				<input type="text" name="fav1">
+			</label>
+			<label>2nd favorite:
+				<input type="text" name="fav2">
+			</label>
+			<label>3rd favorite:
+				<input type="text" name="fav3">
+			</label>
+		</fieldset>
+		<button type="submit">Add Kitten</button>
+	</form>
+</aside>
+</main> 
+
+-->
+
+
+<!--
+
+Creating a Table:
+// present data in rows and columns (tabular) by using a table in html
+
+//refer to CSS default able layout code
+<table>
+		<thead>
+			<tr>
+				<th>Head</th>
+				<th>Head</th>
+				<th>Head</th>
+			</tr>
+		<thead>
+		<tbody>
+			<tr>
+				<td>Data<td>
+				<td>Data<td>
+				<td>Data<td>
+			</tr>
+			<tr>
+				<td>Data<td>
+				<td>Data<td>
+				<td>Data<td>
+			</tr>
+			<tr>
+				<td>Data<td>
+				<td>Data<td>
+				<td>Data<td>
+			<tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Data<td>
+				<td>Data<td>
+				<td>Data<td>
+			<tr>
+		<tfoot>
+	</table>
+
+-->
