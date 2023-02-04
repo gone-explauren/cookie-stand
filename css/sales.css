@@ -8,15 +8,15 @@ header {
 	background-color: coral;
 	width: 100%;
 	border-bottom: 8px groove lightseagreen;
+	padding: 10px;
 }
 
 header img {
-		padding: 10px;
-		display: flex;
-		justify-content: flex-start;
-		width: 200px;
-		height: 70px;
+	padding: 10px;
+	width: 200px;
+	height: 70px;
 }
+
 
 main {
 	background-color: darksalmon;
@@ -31,9 +31,12 @@ table {
 	background-color: white;
 }
 
-table, th, td, tr{
+table,
+th,
+td,
+tr {
 	border: 1px solid black;
-	border-collapse:collapse;
+	border-collapse: collapse;
 
 }
 
@@ -44,6 +47,48 @@ table td {
 	font-family: 'Arial';
 
 }
+h1 {
+	display: flex;
+	justify-content: center;
+}
+
+#addStoreForm {
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+	padding-top: .5rem;
+	width: 60%;
+	border: 1px solid black;
+	background-color: burlywood;
+}
+
+fieldset {
+	padding: 2rem;
+	margin: .5rem;
+}
+
+fieldset legend {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+button {
+	padding: .3rem;
+	margin: .5rem;
+	color: bisque;
+	background-color: black;
+	border-radius: .5rem;
+}
+
+input[type=text], input[type=number] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid bisque;
+	border-radius: 4px;
+}
+
+
 
 /* form {
   margin-top: 800px;
