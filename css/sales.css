@@ -4,6 +4,7 @@
 	padding: 0;
 }
 
+/* why isn't my border showing up? */
 header {
 	background-color: coral;
 	width: 100%;
@@ -17,48 +18,46 @@ header img {
 	height: 70px;
 }
 
+/* can't figure out how to get this on the same level as the fish img */
+header a {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
 
-main {
+
+body {
 	background-color: darksalmon;
 	width: 100%;
-	margin: auto;
 }
 
-table {
-	width: 100%;
-	table-layout: fixed;
-	margin: 2rem;
-	background-color: white;
+
+main h1 {
+  margin-top: .5rem;
+	display: flex;
+	justify-content: center;
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
 }
 
-table,
-th,
-td,
-tr {
-	border: 1px solid black;
-	border-collapse: collapse;
-
-}
-
-table td {
-	border: 1px solid black;
-	padding: .5rem;
-	border-collapse: collapse;
-	font-family: 'Arial';
-
-}
-h1 {
+.add {
 	display: flex;
 	justify-content: center;
 }
 
 #addStoreForm {
-	margin-top: 2rem;
+	margin-top: .5rem;
 	margin-bottom: 4rem;
 	padding-top: .5rem;
 	width: 60%;
 	border: 1px solid black;
 	background-color: burlywood;
+}
+
+.table {
+	display: flex;
+	justify-content: center;
 }
 
 fieldset {
@@ -88,9 +87,54 @@ input[type=text], input[type=number] {
 	border-radius: 4px;
 }
 
+.table {
+  margin-bottom: 3rem;
+}
+
+table {
+	width: 85%;
+	table-layout: fixed;
+	margin: 2rem;
+	background-color: bisque;
+}
+
+table, th, td, tr {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table td {
+	border: 1px solid black;
+	padding: .5rem;
+	border-collapse: collapse;
+	font-family: 'Arial';
+}
+
+table th {
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+/* where is my border and why is the <p> spacing all messed up compared to the index pg? */
+footer {
+	background-color: brown;
+	border-top: 6px groove lightseagreen;
+	width: 100%;
+	height: 70px;
+	display: flex;
+	flex-direction: column;
+}
+
+footer p {
+	color:antiquewhite;
+	font-weight: bold;
+	margin: auto auto auto 10px;
+}
 
 
-/* form {
+/* notes:
+
+form {
   margin-top: 800px;
   border: 3px solid blue;
   padding: 20px;

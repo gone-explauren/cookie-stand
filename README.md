@@ -8,7 +8,7 @@ Time for salmon cookies
 
 ### Links and Resources
 
-* 
+* I used <https://bricampgomez.com/blog/how-to-overlap-images-in-css/> to learn ho to overlap images.
 
 ### Lighthouse Accessibility Report Score
 
