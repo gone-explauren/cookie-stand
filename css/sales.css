@@ -154,3 +154,80 @@ footer p {
   font-weight: bold;
   margin: auto auto auto 10px;
 }
+
+/*
+
+Grid Layout:
+
+//Grid Garden
+#garden {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+#water {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+//or...
+
+#water {
+  // start on grid column 3, end on grid column 6.
+  grid-column: 3/6;
+}
+
+//covering mass areas with the grid
+#garden {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+#water {
+  grid-column: 2/6;
+  grid-row: 1/6;
+}
+
+//or...
+
+#water {
+  // row start / column start / row end /column end;
+  grid-area: 1 / 2 / 4 / 6;
+}
+
+//with multiple items
+#garden {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+#water-1 {
+  grid-area: 1 / 4 / 6 / 5;
+}
+
+#water-2 {
+grid-area: 2/ 3 / 5 / 6;
+}
+
+//If grid items aren't explicitly placed with grid-area, grid-column, grid-row, etc., they are automatically placed according to their order in the source code. We can override this using the order property, which is one of the advantages of grid over table-based layout.
+
+//By default, all grid items have an order of 0, but this can be set to any positive or negative value, similar to z-index.
+
+#garden {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.water {
+  order: 0;
+}
+
+#poison {
+order: 5;
+}
+
+*/
