@@ -12,4 +12,6 @@ Time for salmon cookies
 
 ### Lighthouse Accessibility Report Score
 
-![Lighthouse Score for Lab 09](img/lab-09-lighthouse.jpg)
+* ![Lighthouse Score for Lab 09](img/lab-09-lighthouse.jpg)
+
+* ![Lighthouse Score for Lab 10b](img/lab-10b-lighthouse.jpg)
